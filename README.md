@@ -1,6 +1,6 @@
 # ecostate
 
-escostate contract for phase-5 of regen-network testnet(kontraua)
+escostate contract for phase-5 of regen-network testnet (kontraua)
 
 ### Upload contract
 ```
