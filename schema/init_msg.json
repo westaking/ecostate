@@ -3,31 +3,45 @@
   "title": "InitMsg",
   "type": "object",
   "required": [
-    "arbiter",
-    "end_height",
-    "end_time",
-    "recipient"
+    "beneficiary",
+    "ecostate",
+    "oracle",
+    "payout_end_height",
+    "payout_start_height",
+    "region",
+    "total_tokens"
   ],
   "properties": {
-    "arbiter": {
+    "beneficiary": {
       "$ref": "#/definitions/HumanAddr"
     },
-    "end_height": {
+    "ecostate": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "oracle": {
+      "$ref": "#/definitions/HumanAddr"
+    },
+    "payout_end_height": {
       "type": [
         "integer",
         "null"
       ],
       "format": "int64"
     },
-    "end_time": {
+    "payout_start_height": {
       "type": [
         "integer",
         "null"
       ],
       "format": "int64"
     },
-    "recipient": {
-      "$ref": "#/definitions/HumanAddr"
+    "region": {
+      "type": "string"
+    },
+    "total_tokens": {
+      "type": "integer",
+      "format": "int64"
     }
   },
   "definitions": {

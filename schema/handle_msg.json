@@ -5,23 +5,18 @@
     {
       "type": "object",
       "required": [
-        "approve"
+        "updateecostate"
       ],
       "properties": {
-        "approve": {
+        "updateecostate": {
           "type": "object",
           "required": [
-            "quantity"
+            "ecostate"
           ],
           "properties": {
-            "quantity": {
-              "type": [
-                "array",
-                "null"
-              ],
-              "items": {
-                "$ref": "#/definitions/Coin"
-              }
+            "ecostate": {
+              "type": "integer",
+              "format": "int64"
             }
           }
         }
@@ -30,30 +25,86 @@
     {
       "type": "object",
       "required": [
-        "refund"
+        "lock"
       ],
       "properties": {
-        "refund": {
+        "lock": {
           "type": "object"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "unlock"
+      ],
+      "properties": {
+        "unlock": {
+          "type": "object"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "changebeneficiary"
+      ],
+      "properties": {
+        "changebeneficiary": {
+          "type": "object",
+          "required": [
+            "beneficiary"
+          ],
+          "properties": {
+            "beneficiary": {
+              "$ref": "#/definitions/HumanAddr"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "changeoracle"
+      ],
+      "properties": {
+        "changeoracle": {
+          "type": "object",
+          "required": [
+            "oracle"
+          ],
+          "properties": {
+            "oracle": {
+              "$ref": "#/definitions/HumanAddr"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "transferownership"
+      ],
+      "properties": {
+        "transferownership": {
+          "type": "object",
+          "required": [
+            "owner"
+          ],
+          "properties": {
+            "owner": {
+              "$ref": "#/definitions/HumanAddr"
+            }
+          }
         }
       }
     }
   ],
   "definitions": {
-    "Coin": {
-      "type": "object",
-      "required": [
-        "amount",
-        "denom"
-      ],
-      "properties": {
-        "amount": {
-          "type": "string"
-        },
-        "denom": {
-          "type": "string"
-        }
-      }
+    "HumanAddr": {
+      "type": "string"
     }
   }
 }

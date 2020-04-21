@@ -3,35 +3,58 @@
   "title": "State",
   "type": "object",
   "required": [
-    "arbiter",
-    "end_height",
-    "end_time",
-    "recipient",
-    "source"
+    "beneficiary",
+    "ecostate",
+    "is_locked",
+    "oracle",
+    "owner",
+    "payout_end_height",
+    "payout_start_height",
+    "region",
+    "released_tokens",
+    "total_tokens"
   ],
   "properties": {
-    "arbiter": {
+    "beneficiary": {
       "$ref": "#/definitions/CanonicalAddr"
     },
-    "end_height": {
+    "ecostate": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "is_locked": {
+      "type": "boolean"
+    },
+    "oracle": {
+      "$ref": "#/definitions/CanonicalAddr"
+    },
+    "owner": {
+      "$ref": "#/definitions/CanonicalAddr"
+    },
+    "payout_end_height": {
       "type": [
         "integer",
         "null"
       ],
       "format": "int64"
     },
-    "end_time": {
+    "payout_start_height": {
       "type": [
         "integer",
         "null"
       ],
       "format": "int64"
     },
-    "recipient": {
-      "$ref": "#/definitions/CanonicalAddr"
+    "region": {
+      "type": "string"
     },
-    "source": {
-      "$ref": "#/definitions/CanonicalAddr"
+    "released_tokens": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "total_tokens": {
+      "type": "integer",
+      "format": "int64"
     }
   },
   "definitions": {
